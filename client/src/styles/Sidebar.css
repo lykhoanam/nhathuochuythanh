@@ -1,0 +1,180 @@
+/* basic sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #fff;
+    border-right: 1px solid #f1f3f5;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* no collapse functionality; sidebar is fixed width */
+
+.brand {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+.brand-icon {
+    background: #4caf50;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    /* add small right margin to separate from text */
+    margin-right: 0.5rem;
+}
+
+.brand-text {
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1rem;
+}
+
+.brand-text p.logo {
+    color: #4caf50;
+    margin: 0;
+    text-align: start;
+    font-size: 1.5rem;
+}
+
+.brand-text p {
+    color:#333;
+    margin: 0;
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+
+.auth-section {
+    margin-top: auto;
+    padding: 0.5rem;
+}
+
+.auth-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.auth-section li {
+    margin-bottom: 0.5rem;
+}
+
+.auth-section .icon {
+    margin-right: 0.5rem;
+}
+
+
+.sidebar h1 {
+    font-size: 1.25rem;
+    margin: 0 0 1.5rem 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+/* add a little spacing between each clickable element */
+.sidebar a,
+.sidebar button {
+    margin: 0.25rem 0;
+}
+
+.sidebar a,
+.sidebar button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 0.4rem 0.4rem;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    /* ensures padding doesn't overflow */
+    border-radius: 8px;
+}
+
+.sidebar a:hover,
+.sidebar button:hover {
+    background-color: #f5f5f5;
+}
+
+/* active / focus link styling */
+.sidebar a.active,
+.sidebar a:focus {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.sidebar a.active .icon,
+.sidebar a:focus .icon {
+    color: #fff;
+}
+
+/* mobile toggle button (hidden on desktop) */
+.mobile-toggle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    z-index: 1100;
+}
+
+/* responsive behavior for small screens */
+@media (max-width: 768px) {
+    .mobile-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1050;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
+
+/* Icon placeholder (you can replace with real icons) */
+.sidebar .icon {
+    margin-right: 0.75rem;
+    width: 20px;
+    text-align: center;
+}

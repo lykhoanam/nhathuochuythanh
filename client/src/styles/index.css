@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f8fa;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -15,6 +17,12 @@ code {
 /* when sidebar is shown, push main content to the right */
 .main {
   margin-left: 240px; /* matches sidebar width */
-  padding: 20px;
   box-sizing: border-box;
+  transition: margin-left 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+  }
 }

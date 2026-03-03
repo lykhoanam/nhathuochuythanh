@@ -1,0 +1,46 @@
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #4caf50;
+}
+
+.card-body {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.card-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-change {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.card-change.positive {
+  color: #4caf50;
+}
+
+.card-change.negative {
+  color: #f44336;
+}

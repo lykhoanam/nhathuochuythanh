@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Navbar from "./components/layout/Navbar";
+import Topbar from "./components/layout/Topbar";
 import Home from "./components/layout/Home";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
@@ -26,12 +27,16 @@ function App() {
       <Router>
         <div>
           <Navbar/>
-          <Routes>
-              <Route path="/" element={<Home/>} />
-              <Route path="/register" element={<Register/>} />
-              <Route path="/login" element={<Login/>} />
-          </Routes>
-          
+          <div className="main">
+            <Topbar title="Tổng quan hệ thống" />
+            <div className="page-content">
+              <Routes>
+                  <Route path="/" element={<Home/>} />
+                  <Route path="/register" element={<Register/>} />
+                  <Route path="/login" element={<Login/>} />
+              </Routes>
+            </div>
+          </div>
         </div>
       </Router>
     </Provider>

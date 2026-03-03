@@ -1,0 +1,72 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  height:40px;
+  border-bottom: 1px solid #f1f3f5;
+  z-index: 1000;
+}
+
+.topbar-left{
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 1.25rem;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-search {
+  display: flex;
+  align-items: center;
+  background: #f1f3f5;
+  border-radius: 10px;
+  padding: 0 0.5rem;
+  margin-right: 1rem;
+}
+
+.topbar-search input {
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.topbar-icon {
+  background: #f1f3f5;
+  border: none;
+  font-size: 1rem;
+  color: #555;
+  margin-right: 0.75rem;
+  cursor: pointer;
+}
+
+.topbar-shop-name {
+  color: #555;
+  margin-right: 1rem;
+}
+
+.topbar-shop-name p.name {
+    color: #333;
+    margin: 0;
+    text-align: start;
+    font-size: 1rem;
+}
+
+.topbar-shop-name p {
+    color:#4caf50;
+    margin: 0;
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+
+/* adjust for small screens */
+@media (max-width: 600px) {
+  .topbar-search {
+    display: none;
+  }
+}
